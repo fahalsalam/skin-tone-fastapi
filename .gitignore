@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+
+# Env
+env/
+venv/
+
+# VS Code
+.vscode/
+
+# Model (optional if you don't want to commit)
+skin_tone_kmeans.joblib
