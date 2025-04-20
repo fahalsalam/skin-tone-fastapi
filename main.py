@@ -96,8 +96,8 @@ async def analyze_skin(file: UploadFile = File(..., description="Upload an image
     except Exception as e:
         raise HTTPException(500, f"Processing error: {str(e)}")
 
-@app.get("/")
-def health_check():
+@app.api_route("/", methods=["GET", "HEAD"])
+async def health_check(request: Request):
     return {"status": "Healthy", "model": "KMeans"}
 
 if __name__ == "__main__":
